@@ -25,21 +25,22 @@ fun Application.module() {
             call.respondText("Hello, World!")
         }
         get("/welcome") {
-            call.respondHtml {
-                val name = call.request.queryParameters["name"]
-                head {
-                    title { +"Custom Title" }
-                }
-                body {
-                    if (name.isNullOrEmpty()) {
-                        h3 { +"Welcome" }
-                    } else {
-                        h3 { +"Welcome, $name!" }
-                    }
-                    p { +"Current directory is: ${System.getProperty("user.dir")}"}
-                    img(src = "logo.jpeg")
-                }
-            }
+//            call.respondHtml {
+//                val name = call.request.queryParameters["name"]
+//                head {
+//                    title { +"Custom Title" }
+//                }
+//                body {
+//                    if (name.isNullOrEmpty()) {
+//                        h3 { +"Welcome" }
+//                    } else {
+//                        h3 { +"Welcome, $name!" }
+//                    }
+//                    p { +"Current directory is: ${System.getProperty("user.dir")}"}
+//                    img(src = "logo.jpeg")
+//                }
+//            }
+            call.respondText("Welcome!")
         }
     }
 }
