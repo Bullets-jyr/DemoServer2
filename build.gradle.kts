@@ -4,7 +4,7 @@ val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.8.21"
     application
 }
 
@@ -28,4 +28,6 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
+    implementation("io.ktor:ktor-html-builder:$ktor_version")
 }
